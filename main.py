@@ -1,18 +1,62 @@
-while True:
-    try: #Checks if the input is the correct type which is an integer
-        exammark=int(input("What is your exam grade? - "))
-        while exammark < 0: #Another while loop, checking if the exam grade is under 0
-            exammark=int(input("Please input your exam grade again! - "))
+x=1
+while x<2:
+    print(x)
+    x=x+x
+    if x>2:
         break
-    except ValueError: #If the data doesn't match the input we are getting, this code prevents an error and loops the code back
-        print("Please enter a valid number")
-print("Checking your grade...")
-print("Your grade is:")
-if exammark > 80:
-    print("A")
-elif 60<=exammark<=79:
-    print("B")
-elif 40<=exammark<=59:
-    print("C")
-elif exammark <= 20:
-    print("Fail")
+
+x=2
+while x<5:
+    if x==4:
+        print(x)
+        break
+    print(x, end=" ")
+    x=x+2
+
+x=3
+while x<10:
+    if x==9:
+        print(x)
+        break
+    print(x, end=" ")
+    x=x+3
+
+x=4
+while x<17:
+    if x==16:
+        print(x)
+        break
+    print(x, end=" ")
+    x=x+4
+
+x=5
+while x<26:
+    if x==25:
+        print(x)
+        break
+    print(x, end=" ")
+    x=x+5
+
+x=6
+while x<37:
+    if x==36:
+        print(x)
+        break
+    print(x, end=" ")
+    x=x+6
+
+x=7
+while x<50:
+    if x==49:
+        print(x)
+        break
+    print(x, end=" ")
+    x=x+7
+
+x=8
+while x<65:
+    if x==64:
+        print(x)
+        break
+    print(x, end=" ")
+    x=x+8
