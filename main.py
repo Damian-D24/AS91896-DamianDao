@@ -1,62 +1,29 @@
-x=1
-while x<2:
-    print(x)
-    x=x+x
-    if x>2:
-        break
+class BankAccount: #Creates a BankAccount class
+    def __init__(self, Account_name, balance):
+        self.Account_name = Account_name
+        self.balance = balance
 
-x=2
-while x<5:
-    if x==4:
-        print(x)
-        break
-    print(x, end=" ")
-    x=x+2
+Anyname=BankAccount(Account_name="Any name", balance=100) #Creates an object called Anyname. It has two attributes: "Account_name" and "balance".
 
-x=3
-while x<10:
-    if x==9:
-        print(x)
-        break
-    print(x, end=" ")
-    x=x+3
+def deposit(amount): #Defines a function named deposit
+    while amount<0: #Checks if the amount deposited is under 0
+        print("Invalid deposit amount")
+        amount = int(input("How much do you want to deposit?: ")) #Asks the user again how much they want to deposit. Will repeat until the user inputs a valid amount.
+    Anyname.balance = Anyname.balance + amount #Adds the amount to the account balance
+    return
 
-x=4
-while x<17:
-    if x==16:
-        print(x)
-        break
-    print(x, end=" ")
-    x=x+4
+def withdraw(amount): #Defines a function named withdraw
+    while amount>Anyname.balance: #Checks if the amount is over the account balance
+        print("Insufficient funds")
+        amount = int(input("How much do you want to withdraw? ")) #Asks the user again how much they want to withdraw. Will repeat until the user inputs a valid amount.
+    if amount<=Anyname.balance: #Checks if the amount withdrawn is less than the account balance
+        Anyname.balance=Anyname.balance - amount #Subtracts the amount from the account balance
+        return
 
-x=5
-while x<26:
-    if x==25:
-        print(x)
-        break
-    print(x, end=" ")
-    x=x+5
+print("Welcome to your bank account!")
+amount=int(input("How much do you want to deposit?: ")) #Asks for input for the "amount" that will be deposited
+deposit(amount) #Takes earlier input and uses it in the deposit function
+amount=int(input("How much do you want to withdraw? ")) #Asks for input for the "amount" that will be withdrawn
+withdraw(amount) #Takes earlier input and uses it in the withdraw function
 
-x=6
-while x<37:
-    if x==36:
-        print(x)
-        break
-    print(x, end=" ")
-    x=x+6
-
-x=7
-while x<50:
-    if x==49:
-        print(x)
-        break
-    print(x, end=" ")
-    x=x+7
-
-x=8
-while x<65:
-    if x==64:
-        print(x)
-        break
-    print(x, end=" ")
-    x=x+8
+print("Your final account balance is", Anyname.balance)
