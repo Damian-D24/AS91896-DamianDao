@@ -1,29 +1,26 @@
-class BankAccount: #Creates a BankAccount class
-    def __init__(self, Account_name, balance):
-        self.Account_name = Account_name
-        self.balance = balance
+import tkinter as tk
+root = tk.Tk()
 
-Anyname=BankAccount(Account_name="Any name", balance=100) #Creates an object called Anyname. It has two attributes: "Account_name" and "balance".
+root.title("The Best Program")
 
-def deposit(amount): #Defines a function named deposit
-    while amount<0: #Checks if the amount deposited is under 0
-        print("Invalid deposit amount")
-        amount = int(input("How much do you want to deposit?: ")) #Asks the user again how much they want to deposit. Will repeat until the user inputs a valid amount.
-    Anyname.balance = Anyname.balance + amount #Adds the amount to the account balance
-    return
+first_title=tk.Label(root, text="Welcome to 12CSC")
+first_title.grid(row=0, column=0)
 
-def withdraw(amount): #Defines a function named withdraw
-    while amount>Anyname.balance: #Checks if the amount is over the account balance
-        print("Insufficient funds")
-        amount = int(input("How much do you want to withdraw? ")) #Asks the user again how much they want to withdraw. Will repeat until the user inputs a valid amount.
-    if amount<=Anyname.balance: #Checks if the amount withdrawn is less than the account balance
-        Anyname.balance=Anyname.balance - amount #Subtracts the amount from the account balance
-        return
+stop_button=tk.Button(root, text="Stop", width=30, command=root.destroy, bg="red", fg="yellow", activebackground="blue", activeforeground="white")
+stop_button.grid(row=1, column=0)
 
-print("Welcome to your bank account!")
-amount=int(input("How much do you want to deposit?: ")) #Asks for input for the "amount" that will be deposited
-deposit(amount) #Takes earlier input and uses it in the deposit function
-amount=int(input("How much do you want to withdraw? ")) #Asks for input for the "amount" that will be withdrawn
-withdraw(amount) #Takes earlier input and uses it in the withdraw function
+second_title=tk.Button(root, text="Who are you?", bg="green", fg="white", activebackground="pink", activeforeground="black")
+second_title.grid(row=2, column=0)
 
-print("Your final account balance is", Anyname.balance)
+firstname=tk.Label(root, text="First name:", bg="red", fg="yellow", activebackground="blue", activeforeground="white")
+secondname=tk.Label(root, text="Second name:", bg="red", fg="yellow", activebackground="blue", activeforeground="white")
+
+firstname.grid(row=3, column=0)
+secondname.grid(row=4, column=0)
+
+name1=tk.Entry(root, bg="red", fg="yellow")
+name2=tk.Entry(root, bg="red", fg="yellow")
+name1.grid(row=3, column=1)
+name2.grid(row=4, column=1)
+
+root.mainloop()
