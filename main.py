@@ -114,6 +114,7 @@ class QuizStarter:
               text="Start Quiz",
               font=("Comic Sans MS", 14),
               bg="#a591ff",
+              relief="raised",
               command=self.start_quiz).pack(pady=10)
 
 
@@ -121,6 +122,7 @@ class QuizStarter:
               text="Exit",
               font=("Comic Sans MS", 14),
               bg="#91ccff", fg="white",
+              relief="raised",
               command=self.parent.destroy).pack(pady=10)
 
 
@@ -197,6 +199,7 @@ class Quiz:
                    bg=BG_COLOR,
                    wraplength=answer_wrap,
                    justify="left",
+                   relief="ridge",
                    anchor="w").grid(row=3, column=0, sticky="w", padx=20, pady=10)
 
 
@@ -207,6 +210,7 @@ class Quiz:
                    bg=BG_COLOR,
                    wraplength=answer_wrap,
                    justify="left",
+                   relief="ridge",
                    anchor="w").grid(row=3, column=1, sticky="w", padx=20, pady=10)
 
 
@@ -217,6 +221,7 @@ class Quiz:
                    bg=BG_COLOR,
                    wraplength=answer_wrap,
                    justify="left",
+                   relief="ridge",
                    anchor="w").grid(row=4, column=0, sticky="w", padx=20, pady=10)
 
 
@@ -227,6 +232,7 @@ class Quiz:
                    bg=BG_COLOR,
                    wraplength=answer_wrap,
                    justify="left",
+                   relief="ridge",
                    anchor="w").grid(row=4, column=1, sticky="w", padx=20, pady=10)
 
 
